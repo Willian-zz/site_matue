@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-banner {
+    height: 20vw;
+    width: 100%;
+}
+
+.banner-img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+}
+
+ .nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.nav-link {
+    width: 15vw;
+    height: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    text-align: center;
+    align-content: center;
+    transition: 0.3s ease;
+} 
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+    transition: 0.3s ease;
+}
+
+.icon-matue {
+    width: 90px;
+    margin: 10px auto 0 10px;
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    background-color: aqua;
+}
+
+.bio-img {
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+}
