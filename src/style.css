@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .header-banner {
@@ -18,6 +19,8 @@
     width: 100%;
     background-color: rgb(255, 255, 255);
     position: sticky;
+    top: 0px;
+    z-index: 1000;
 }
 
  .nav {
@@ -47,17 +50,104 @@
 
 .icon-matue {
     width: 90px;
-    margin: 10px auto 0 10px;
+    margin: 5px auto 5px 10px;
 }
 
 .container {
+    display: flex;
     width: 100%;
-    height: 80vh;
-    background-color: aqua;
+    height: 100vh;
+    gap: 30px;
+    overflow: hidden;
 }
 
 .bio-img {
+    flex: 1;
     height: 100%;
     width: 30%;
     object-fit: cover;
+}
+
+.right-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* EMPILHA */
+    justify-content: space-between;
+}
+
+.text-container {
+    margin: 50px 20px 10px 0px;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 90px;
+}
+
+.about-subtitle {
+    text-align: center;
+    font-size: 50px;
+}
+
+.about-text {
+    text-align: justify;
+    font-size: 28px;
+    line-height: 38px;
+}
+
+.about-discography {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.album-disk {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    margin: 0px 50px 0px 0px;
+}
+
+.album-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: block;
+    z-index: 2;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+.vinil-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    transition: 0.5s ease;
+}
+
+.vinil-photo { /* FOTO DO VINIL */
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    transition: 0.5s ease;
+    animation: girar 2s linear infinite; 
+    animation-play-state: paused;
+}
+
+.album-disk:hover .vinil-wrapper { /* REDOR DO VINIL */
+    transform: translateX(50%);
+    transition: 0.5s ease;
+}
+
+.album-disk:hover .vinil-photo {
+    animation-play-state: running;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg); /* ANIMAÇÃO ROTAÇÃO */
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
